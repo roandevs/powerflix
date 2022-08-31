@@ -1,0 +1,12 @@
+echo "[Unit] 
+Description=movies.roan.dev entire fullstack web app
+After=network.target 
+[Service]  
+ExecStart=/usr/bin/npm run start 
+WorkingDirectory=/opt/movies.roan.dev
+User=rsakeys
+[Install] 
+WantedBy=multi-user.target" > /etc/systemd/system/movies.service & wait $!
+sudo systemctl daemon-reload & wait $!
+sudo systemctl enable movies.service & wait $!
+sudo service movies start & wait $!
