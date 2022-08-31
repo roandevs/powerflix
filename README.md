@@ -18,3 +18,5 @@
 
 - Queueing system to prevent server overload
 
+- Production version takes advantage of AWS S3 buckets & utilizes a custom Node written download API that can is designed to be ran on distributed servers 
+
